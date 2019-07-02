@@ -21,12 +21,13 @@ import br.com.posturacerta.R;
 public class TabViewPagerAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> fragmentsForTabsList = new ArrayList<>();
-    private List<String> tabNameList = new ArrayList<>();
+    Context context;
 
-    public TabViewPagerAdapter(FragmentManager fm) {
+    public TabViewPagerAdapter(FragmentManager fm, List<Fragment> fragmentsForTabsList,  Context context) {
         super(fm);
+        this.fragmentsForTabsList = fragmentsForTabsList;
+        this.context = context;
     }
-
 
     @Override
     public Fragment getItem(int position) {
@@ -45,6 +46,6 @@ public class TabViewPagerAdapter extends FragmentPagerAdapter {
 
     public void addFragment(Fragment fragment, String title) {
         fragmentsForTabsList.add(fragment);
-        tabNameList.add(title);
+
       }
 }
