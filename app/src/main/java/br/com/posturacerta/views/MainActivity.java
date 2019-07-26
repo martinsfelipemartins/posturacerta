@@ -1,4 +1,4 @@
-package br.com.posturacerta;
+package br.com.posturacerta.views;
 
 import android.os.Bundle;
 
@@ -12,10 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.posturacerta.R;
 import br.com.posturacerta.desempenho.DesempenhoFragment;
 import br.com.posturacerta.dicas.DicasFragment;
-import br.com.posturacerta.principal.PrincipalFragment;
-import br.com.posturacerta.ui.main.TabViewPagerAdapter;
+import br.com.posturacerta.views.PrincipalFragment;
+import br.com.posturacerta.model.TabViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
@@ -28,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         tabLayout = findViewById(R.id.allTabs);
         viewPager = findViewById(R.id.view_pager);
         getFragments();

@@ -1,4 +1,4 @@
-package br.com.posturacerta.principal;
+package br.com.posturacerta.views;
 
 
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package br.com.posturacerta;
+package br.com.posturacerta.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,8 @@ import android.widget.ImageView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import br.com.posturacerta.ui.main.TabViewPagerAdapter;
+import br.com.posturacerta.R;
+import br.com.posturacerta.views.MainActivity;
 
 public class SplashActivity extends AppCompatActivity  {
 
@@ -42,7 +43,7 @@ public class SplashActivity extends AppCompatActivity  {
 
     private void jump() {
         timer.cancel();
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, PesquisaActivity.class);
         startActivity(intent);
         finish();
     }
